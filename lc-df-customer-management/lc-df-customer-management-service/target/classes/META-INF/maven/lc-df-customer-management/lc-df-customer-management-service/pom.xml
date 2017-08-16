@@ -1,0 +1,59 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>lc-df-customer-management</groupId>
+		<artifactId>lc-df-customer-management</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>lc-df-customer-management-service</artifactId>
+	<name>Customer Management - Service</name>
+	<description>Module that contains services implementation defined on Service API module. Depends of Repository Module and Service API Module.</description>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>lc-df-customer-management</groupId>
+			<artifactId>lc-df-customer-management-repository</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<!-- Spring active MQ dependencies -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-activemq</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.tibco</groupId>
+			<artifactId>jms-2.0</artifactId>
+			<version>8.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.tibco</groupId>
+			<artifactId>tibcrypt</artifactId>
+			<version>8.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.tibco</groupId>
+			<artifactId>tibjms</artifactId>
+			<version>8.1</version>
+		</dependency>
+
+
+		<!-- Spring active Kafka dependencies -->
+		<dependency>
+			<groupId>org.springframework.kafka</groupId>
+			<artifactId>spring-kafka</artifactId>
+			<version>${spring-kafka.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.kafka</groupId>
+			<artifactId>spring-kafka-test</artifactId>
+			<version>${spring-kafka.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+	</dependencies>
+
+</project>

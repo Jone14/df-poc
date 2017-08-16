@@ -1,0 +1,49 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>lc-df-customer-management</groupId>
+		<artifactId>lc-df-customer-management</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>lc-df-customer-management-api</artifactId>
+	<name>Customer Management - Api</name>
+	<description>This is the main module of the project. It contains Application.java class, that contains main method, necessary to run Spring Boot applications. It contains all necessary application configuration properties. It contains all web controllers, views and web resources. It include Service Implementation module as dependency that contains Model Module, Repository Module and Service Api Module.</description>
+
+	<dependencies>
+
+		<!-- Project modules -->
+		<dependency>
+			<groupId>lc-df-customer-management</groupId>
+			<artifactId>lc-df-customer-management-service</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<!-- Spring Boot plugins -->
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<skip>false</skip>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>d:/lc-df-customer</outputDirectory>
+						</configuration>
+					</execution>
+
+				</executions>
+			</plugin>
+			
+		</plugins>
+	</build>
+
+</project>

@@ -1,0 +1,14 @@
+C:\Users\jonej\Documents\workspace-sts-3.8.4.RELEASE\lc-df-customer-management\lc-df-customer-management-service\src\main\java\com\lc\df\customermanagement\service\enums\CustomerCategory.java
+C:\Users\jonej\Documents\workspace-sts-3.8.4.RELEASE\lc-df-customer-management\lc-df-customer-management-service\src\main\java\com\lc\df\customermanagement\service\exception\ExceptionResult.java
+C:\Users\jonej\Documents\workspace-sts-3.8.4.RELEASE\lc-df-customer-management\lc-df-customer-management-service\src\main\java\com\lc\df\customermanagement\service\swagger\SwagerConfig.java
+C:\Users\jonej\Documents\workspace-sts-3.8.4.RELEASE\lc-df-customer-management\lc-df-customer-management-service\src\main\java\com\lc\df\customermanagement\service\api\CustomerManagementService.java
+C:\Users\jonej\Documents\workspace-sts-3.8.4.RELEASE\lc-df-customer-management\lc-df-customer-management-service\src\main\java\com\lc\df\customermanagement\jms\TibcoMQComponent.java
+C:\Users\jonej\Documents\workspace-sts-3.8.4.RELEASE\lc-df-customer-management\lc-df-customer-management-service\src\main\java\com\lc\df\customermanagement\jms\listener\KafkaMessageListener.java
+C:\Users\jonej\Documents\workspace-sts-3.8.4.RELEASE\lc-df-customer-management\lc-df-customer-management-service\src\main\java\com\lc\df\customermanagement\jms\listener\ActiveMQMessageListener.java
+C:\Users\jonej\Documents\workspace-sts-3.8.4.RELEASE\lc-df-customer-management\lc-df-customer-management-service\src\main\java\com\lc\df\customermanagement\service\logging\CustomerLoggingHandler.java
+C:\Users\jonej\Documents\workspace-sts-3.8.4.RELEASE\lc-df-customer-management\lc-df-customer-management-service\src\main\java\com\lc\df\customermanagement\service\exception\CustomerManagementServiceException.java
+C:\Users\jonej\Documents\workspace-sts-3.8.4.RELEASE\lc-df-customer-management\lc-df-customer-management-service\src\main\java\com\lc\df\customermanagement\service\exception\CustomerManagementServiceExceptionHandler.java
+C:\Users\jonej\Documents\workspace-sts-3.8.4.RELEASE\lc-df-customer-management\lc-df-customer-management-service\src\main\java\com\lc\df\customermanagement\service\kafka\KafkaComponent.java
+C:\Users\jonej\Documents\workspace-sts-3.8.4.RELEASE\lc-df-customer-management\lc-df-customer-management-service\src\main\java\com\lc\df\customermanagement\jms\MQComponent.java
+C:\Users\jonej\Documents\workspace-sts-3.8.4.RELEASE\lc-df-customer-management\lc-df-customer-management-service\src\main\java\com\lc\df\customermanagement\service\impl\CustomerManagementServiceImpl.java
+C:\Users\jonej\Documents\workspace-sts-3.8.4.RELEASE\lc-df-customer-management\lc-df-customer-management-service\src\main\java\com\lc\df\customermanagement\service\enums\CustomerStatus.java

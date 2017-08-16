@@ -1,0 +1,93 @@
+<div *ngIf="customer">
+  <h2>{{customer.firstName}} details!</h2>
+  <div>
+    <label>id: </label>{{customer.customerId}}</div>
+
+  <div class="form-group">
+    <label for="firstName">First Name :</label>
+    <input [(ngModel)]="customer.firstName" type="text" class="form-control" id="firstName" required name="firstName"  #firstName="ngModel">
+    <div [hidden]="firstName.valid || firstName.pristine"
+         class="alert alert-danger">
+      First Name is required
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="lastName">Last Name :</label>
+    <input [(ngModel)]="customer.lastName" type="text" class="form-control" id="lastName" required name="lastName" #lastName="ngModel">
+    <div [hidden]="lastName.valid || lastName.pristine"
+         class="alert alert-danger">
+      Last Name is required
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="addressLine1">Location :</label>
+    <input [(ngModel)]="customer.addressLine1" type="text" class="form-control" id="addressLine1" required name="addressLine1" #addressLine1="ngModel">
+    <div [hidden]="addressLine1.valid || addressLine1.pristine"
+         class="alert alert-danger">
+      Location is required
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="addressLine2">Country :</label>
+    <input [(ngModel)]="customer.addressLine2" type="text" class="form-control" id="addressLine2" required name="addressLine2" #addressLine2="ngModel">
+    <div [hidden]="addressLine2.valid || addressLine2.pristine"
+         class="alert alert-danger">
+      Country is required
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="postalCode">Postal Code :</label>
+    <input [(ngModel)]="customer.postalCode" type="text" class="form-control" id="postalCode" required name="postalCode" #postalCode="ngModel">
+    <div [hidden]="postalCode.valid || postalCode.pristine"
+         class="alert alert-danger">
+      Postal Code is required
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="emailId">Email Id :</label>
+    <input [(ngModel)]="customer.emailId" type="text" class="form-control" id="emailId" required name="emailId" #emailId="ngModel" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
+    <div [hidden]="emailId.valid || emailId.pristine">
+      <div  *ngIf="emailId.errors && emailId.errors.pattern ;else other_content" class="alert alert-danger">
+        Email is Invalid (Format: XXXX@XXX.XXX/XXXX@XXX.XX.XX)
+      </div>
+      <ng-template #other_content class="alert alert-danger"> Email Id is required</ng-template>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="phoneNumber">Phone Number :</label>
+    <input [(ngModel)]="customer.phoneNumber" type="text" class="form-control" id="phoneNumber" required name="phoneNumber" #phoneNumber="ngModel" pattern="^\d{10}$">
+    <div [hidden]="phoneNumber.valid || phoneNumber.pristine">
+      <div  *ngIf="phoneNumber.errors && phoneNumber.errors.pattern ;else other_content" class="alert alert-danger">
+        Phone Number is invalid (format: 0000000000)
+      </div>
+      <ng-template #other_content class="alert alert-danger"> Phone Number is required</ng-template>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="status">Status :</label>
+    <input [(ngModel)]="customer.status" type="text" class="form-control" id="status" required name="status" #status="ngModel">
+    <div [hidden]="status.valid || status.pristine"
+         class="alert alert-danger">
+      status is required
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="category">Category :</label>
+    <input [(ngModel)]="customer.category" type="text" class="form-control" id="category" required name="category" #category="ngModel">
+    <div [hidden]="category.valid || category.pristine"
+         class="alert alert-danger">
+      category is required
+    </div>
+  </div>
+
+  <button (click)="goBack()">Back</button>
+  <button (click)="save()">Save</button>
+</div>

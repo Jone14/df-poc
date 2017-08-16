@@ -1,0 +1,28 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>lc-df-customer-management</groupId>
+    <artifactId>lc-df-customer-management</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>lc-df-customer-management-model</artifactId>
+  <name>Customer Management - Model</name>
+  <description>Module that contains all Entities and Visual Objects to be used in the project. It doesn't have any project module dependencies.</description>
+  
+  <dependencies>
+  
+  <!-- Spring couch base dependencies -->
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-couchbase</artifactId>
+			<version>2.2.4.RELEASE</version>
+		</dependency>
+		
+		<dependency>
+    		<groupId>com.fasterxml.jackson.dataformat</groupId>
+    		<artifactId>jackson-dataformat-xml</artifactId>
+		</dependency>														   
+				
+  </dependencies>
+   	
+</project>

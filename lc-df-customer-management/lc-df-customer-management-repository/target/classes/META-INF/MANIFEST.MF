@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: Customer Management - Repository
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: jonej
+Implementation-Vendor-Id: lc-df-customer-management
+Build-Jdk: 1.8.0_144
+Implementation-URL: http://projects.spring.io/spring-boot/lc-df-custom
+ er-management/lc-df-customer-management-repository/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+

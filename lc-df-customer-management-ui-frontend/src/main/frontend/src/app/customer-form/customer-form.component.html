@@ -1,0 +1,138 @@
+<div class="container">
+  <h1>Customer Form</h1>
+  <form (ngSubmit)="onSubmit()" #customerForm="ngForm" ng-init="model=''">
+    <div class="form-group">
+      <label for="firstName">First Name :</label>
+      <input [(ngModel)]="model.firstName" type="text" class="form-control" id="firstName" required name="firstName"  #firstName="ngModel">
+      <div [hidden]="firstName.valid || firstName.pristine"
+           class="alert alert-danger">
+        First Name is required
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="lastName">Last Name :</label>
+      <input [(ngModel)]="model.lastName" type="text" class="form-control" id="lastName" required name="lastName" #lastName="ngModel">
+      <div [hidden]="lastName.valid || lastName.pristine"
+           class="alert alert-danger">
+        Last Name is required
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="addressLine1">Location :</label>
+      <input [(ngModel)]="model.addressLine1" type="text" class="form-control" id="addressLine1" required name="addressLine1" #addressLine1="ngModel">
+      <div [hidden]="addressLine1.valid || addressLine1.pristine"
+           class="alert alert-danger">
+        Location is required
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="addressLine2">Country :</label>
+      <input [(ngModel)]="model.addressLine2" type="text" class="form-control" id="addressLine2" required name="addressLine2" #addressLine2="ngModel">
+      <div [hidden]="addressLine2.valid || addressLine2.pristine"
+           class="alert alert-danger">
+        Country is required
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="postalCode">Postal Code :</label>
+      <input [(ngModel)]="model.postalCode" type="text" class="form-control" id="postalCode" required name="postalCode" #postalCode="ngModel">
+      <div [hidden]="postalCode.valid || postalCode.pristine"
+           class="alert alert-danger">
+        Postal Code is required
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="emailId">Email Id :</label>
+      <input [(ngModel)]="model.emailId" type="text" class="form-control" id="emailId" required name="emailId" #emailId="ngModel" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
+      <div [hidden]="emailId.valid || emailId.pristine">
+        <div  *ngIf="emailId.errors && emailId.errors.pattern ;else other_content" class="alert alert-danger">
+          Email is Invalid (Format: XXXX@XXX.XXX/XXXX@XXX.XX.XX)
+        </div>
+        <ng-template #other_content class="alert alert-danger"> Email Id is required</ng-template>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="phoneNumber">Phone Number :</label>
+      <input [(ngModel)]="model.phoneNumber" type="text" class="form-control" id="phoneNumber" required name="phoneNumber" #phoneNumber="ngModel" pattern="^\d{10}$">
+      <div [hidden]="phoneNumber.valid || phoneNumber.pristine">
+        <div  *ngIf="phoneNumber.errors && phoneNumber.errors.pattern ;else other_content" class="alert alert-danger">
+          Phone Number is invalid (format: 0000000000)
+        </div>
+        <ng-template #other_content class="alert alert-danger"> Phone Number is required</ng-template>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="status">Status :</label>
+      <input [(ngModel)]="model.status" type="text" class="form-control" id="status" required name="status" #status="ngModel">
+      <div [hidden]="status.valid || status.pristine"
+           class="alert alert-danger">
+        status is required
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="category">Category :</label>
+      <input [(ngModel)]="model.category" type="text" class="form-control" id="category" required name="category" #category="ngModel">
+      <div [hidden]="category.valid || category.pristine"
+           class="alert alert-danger">
+        category is required
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-success"[disabled]="!customerForm.form.valid">Next</button>
+
+    <button type="button" class="btn btn-default" (click)="newCustomer(); customerForm.reset()">New Customer</button>
+
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h2>You submitted the following:</h2>
+  <div class="row">
+    <div class="col-xs-3">First Name :</div>
+    <div class="col-xs-9  pull-left">{{ model.firstName }}</div>
+  </div>
+  <div class="row">
+    <div class="col-xs-3">Last Name :</div>
+    <div class="col-xs-9 pull-left">{{ model.lastName }}</div>
+  </div>
+  <div class="row">
+    <div class="col-xs-3">Location :</div>
+    <div class="col-xs-9  pull-left">{{ model.addressLine1 }}</div>
+  </div>
+  <div class="row">
+    <div class="col-xs-3">Country :</div>
+    <div class="col-xs-9 pull-left">{{ model.addressLine2 }}</div>
+  </div>
+  <div class="row">
+    <div class="col-xs-3">Postal Code :</div>
+    <div class="col-xs-9  pull-left">{{ model.postalCode }}</div>
+  </div>
+  <div class="row">
+    <div class="col-xs-3">Email Id :</div>
+    <div class="col-xs-9  pull-left">{{ model.emailId }}</div>
+  </div>
+  <div class="row">
+    <div class="col-xs-3">Phone Number :</div>
+    <div class="col-xs-9 pull-left">{{ model.phoneNumber }}</div>
+  </div>
+  <div class="row">
+    <div class="col-xs-3">Status :</div>
+    <div class="col-xs-9 pull-left">{{ model.status }}</div>
+  </div>
+  <div class="row">
+    <div class="col-xs-3">Category :</div>
+    <div class="col-xs-9  pull-left">{{ model.category }}</div>
+  </div>
+  <br>
+  <button class="btn btn-primary" (click)="submitted=false">Edit</button>
+  <button type="button" class="btn btn-default" (click)="addNewCustomer(model); customerForm.reset()">Add Customer</button>
+</div>
+
